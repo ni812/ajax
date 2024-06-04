@@ -21,6 +21,8 @@ var_dump($res);
 */
 
 
+//echo"321";
+
 class TooManyRequests extends Exception
 {
 }
@@ -231,8 +233,10 @@ $dadata->init();
 // Стандартизовать ФИО
 $result = $dadata->clean("name", $_POST['user_name']." ".$_POST['user_second_name']." ".$_POST['user_last_name']);
 
-echo '<pre>';
-print_r($result);
-echo '</pre>';
+//echo '<pre>';
+//print_r($result);
+//echo '</pre>';
+
+echo json_encode($result, JSON_UNESCAPED_UNICODE);
 
 $dadata->close();
